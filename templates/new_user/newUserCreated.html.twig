@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <p>New user is created :</p><br>
+        {% for d in data %}
+            {{ d }}<br>
+        {% endfor %}
+    </div>
+    <div>
+        <a href="{{ path('users') }}"
+           class="list">Back to all users</a><br>
+    </div>
+{% endblock %}

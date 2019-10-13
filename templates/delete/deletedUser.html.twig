@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="alert">
+        <p>User {{ deletedUser.first_name }}  {{ deletedUser.last_name }} is deleted</p><br>
+        <a href="{{ path('users') }}"
+           class="list">Back to all users</a><br>
+    </div>
+{% endblock %}

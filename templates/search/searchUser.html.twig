@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        {{ render(controller(
+            'App\\Controller\\SearchController::searchBar'
+        )) }}
+    </div>
+    <div class="users">
+        <ul>
+{#            {% for user in searchedUser %}#}
+{#                <a href="{{ path('findUser',{'id': user.id}) }}"#}
+{#                   class="list">{{ user.first_name }} {{ user.last_name }}</a><br>#}
+{#                {{ user.first_name }} {{ user.last_name }}#}
+{#            {% endfor %}#}
+{#            {{ dump(searchedUser) }}#}
+        </ul>
+    </div>
+{% endblock %}

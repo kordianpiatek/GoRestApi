@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="top">
+        <a href="{{ path('searchUser') }}"
+           class="list">Search user</a><br>
+    </div>
+    <div class="users">
+        <ul>
+            <p>All users</p>
+            {% for user in users %}
+                <a href="{{ path('findUser',{'id': user.id}) }}"
+                class="list">{{ user.first_name }} {{ user.last_name }}</a><br>
+            {% endfor %}
+        </ul>
+        <button><a href="{{ path('newUser') }}"
+                   class="list">Add new user</a><br></button>
+    </div>
+{% endblock %}
+

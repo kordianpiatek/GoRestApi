@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="user">
+        <p>First and last name: {{ foundUser.first_name }} {{ foundUser.last_name }}</p>
+        <p>Gender: {{ foundUser.gender }}</p>
+        <p>Date of birth: {{ foundUser.dob }}</p>
+        <p>Email: {{ foundUser.email }}</p>
+        <p>Phone: {{ foundUser.phone }}</p>
+        <p>Website: {{ foundUser.website }}</p>
+        <p>Address: {{ foundUser.address }}</p>
+        <p>Status: {{ foundUser.status }}</p>
+        <br>
+        <button class="button edit"><a href="{{ path('editUser',{'id': foundUser.id, 'first_name':foundUser.first_name, 'last_name':foundUser.last_name}) }}"
+                                       class="href">Edit</a></button>
+        <button class="button delete"><a href="{{ path('deleteUser',{'id': foundUser.id}) }}"
+                                         class="href">Delete</a></button>
+    </div>
+    <div>
+        <a href="{{ path('users') }}"
+           class="list">Back to all users</a><br>
+    </div>
+{% endblock %}
